@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Julian Sales",
+  "author": "Davi Martins",
   "license": "ISC",
   "type": "commonjs"
 }
