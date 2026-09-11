@@ -22,3 +22,4 @@ async function salvarLogSystem (mensagemLog) {
 }
 salvarLogSystem('Inicialização do servidor concluída!\n');
 salvarLogSystem('Conexão com o banco de dados estabelecida!\n');
+//salva o informações na system.log
