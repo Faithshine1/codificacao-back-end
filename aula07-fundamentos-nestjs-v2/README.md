@@ -1,118 +1,366 @@
+Claro. Abaixo está o **README.md completo**, já com uma seção para documentar as alterações no `app.controller.ts` e `app.service.ts`. Como você ainda não enviou o código desses dois arquivos, a descrição dessas alterações está genérica.
+
+````
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
+  <a href="http://nestjs.com/" target="blank">
+    <img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" />
+  </a>
 </p>
 
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
+<p align="center">
+  A progressive
+  <a href="http://nodejs.org" target="_blank">Node.js</a>
+  framework for building efficient and scalable server-side applications.
 </p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+<p align="center">
+  <a href="https://www.npmjs.com/~nestjscore" target="_blank">
+    <img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" />
+  </a>
+  <a href="https://www.npmjs.com/~nestjscore" target="_blank">
+    <img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" />
+  </a>
+  <a href="https://www.npmjs.com/~nestjscore" target="_blank">
+    <img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" />
+  </a>
+  <a href="https://circleci.com/gh/nestjs/nest" target="_blank">
+    <img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" />
+  </a>
+  <a href="https://discord.gg/G7Qnnhy" target="_blank">
+    <img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord" />
+  </a>
+  <a href="https://opencollective.com/nest#backer" target="_blank">
+    <img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" />
+  </a>
+  <a href="https://opencollective.com/nest#sponsor" target="_blank">
+    <img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" />
+  </a>
+  <a href="https://paypal.me/kamilmysliwiec" target="_blank">
+    <img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us" />
+  </a>
+  <a href="https://opencollective.com/nest#sponsor" target="_blank">
+    <img
+      src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg"
+      alt="Support us"
+    />
+  </a>
+  <a href="https://twitter.com/nestframework" target="_blank">
+    <img
+      src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"
+      alt="Follow us on Twitter"
+    />
+  </a>
+</p>
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Descrição
 
-## Project setup
+Este projeto foi desenvolvido utilizando o framework
+[NestJS](https://github.com/nestjs/nest) com TypeScript.
+
+O NestJS é um framework progressivo para desenvolvimento de aplicações
+server-side utilizando Node.js, oferecendo uma estrutura organizada,
+escalável e eficiente para criação de APIs e aplicações backend.
+
+## Tecnologias utilizadas
+
+- Node.js
+- NestJS
+- TypeScript
+- npm
+- Jest
+- Supertest
+
+## Configuração do projeto
+
+Para instalar as dependências do projeto, execute:
 
 ```bash
-$ npm install
+npm install
 ```
 
-## Compile and run the project
+## Executando o projeto
+
+### Modo de desenvolvimento
 
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+npm run start
 ```
 
-## Run tests
+### Modo de desenvolvimento com atualização automática
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+npm run start:dev
 ```
 
-## Deployment
-
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+### Modo de produção
 
 ```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
+npm run start:prod
 ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+## Testes
 
-## Observability
+Para executar os testes unitários:
 
-In production applications, observability is essential for understanding how your system behaves, detecting issues early, and maintaining reliable performance.
+```bash
+npm run test
+```
 
-[NestJS Observe](https://observe.nestjs.com) automatically instruments your NestJS application, giving you deep visibility into your system with minimal setup:
+Para executar os testes end-to-end:
 
-- **Distributed tracing:** Follow requests across services and understand how they flow through your system.
-- **Waterfall analysis:** Visualize request execution and identify slow operations, bottlenecks, and unexpected delays.
-- **Performance analysis:** Analyze application performance in real time and quickly pinpoint areas that need optimization.
-- **Metrics:** Track key application and infrastructure metrics to understand system health and performance trends.
-- **Logging:** Centralize and correlate logs with traces and other telemetry to make debugging easier.
-- **Error tracking:** Detect errors quickly and investigate their root causes with the surrounding context.
-- **SLA monitoring:** Track service-level objectives and identify when your application is approaching or exceeding defined thresholds.
-- **Alarms and alerts:** Set up alerts for critical errors, performance degradation, SLA violations, and other anomalies so your team can react quickly.
+```bash
+npm run test:e2e
+```
 
-This project is already instrumented. Create a free account at [observe.nestjs.com](https://observe.nestjs.com), add an application, and paste the generated app key and secret into the `ObserveModule.forRoot()` call in `src/app.module.ts`.
+Para verificar a cobertura dos testes:
 
-The free plan needs no payment details and covers 300,000 events a month. You can also browse the [live demo](https://www.observe-demo.nestjs.com/dashboard) first - the whole dashboard over a busy service's data, with nothing to install.
+```bash
+npm run test:cov
+```
 
-## Resources
+## Estrutura do projeto
 
-Check out a few resources that may come in handy when working with NestJS:
+A estrutura principal do projeto é organizada da seguinte maneira:
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Auto-instrument your application with [NestJS Observe](https://observe.nestjs.com). Distributed tracing, metrics, and logging made easy. Error tracking and performance monitoring for your NestJS applications.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+```text
+src/
+├── app.controller.ts
+├── app.service.ts
+├── app.module.ts
+└── main.ts
+```
 
-## Support
+### `app.controller.ts`
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+O `AppController` é responsável por receber e tratar as requisições HTTP da aplicação.
 
-## Stay in touch
+É nele que são definidos os endpoints que podem ser acessados pelos clientes da API.
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+O controller também utiliza o `AppService` para executar a lógica necessária e retornar uma resposta ao cliente.
 
-## License
+### `app.service.ts`
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+O `AppService` é responsável por concentrar a lógica da aplicação.
+
+Os métodos definidos nesse arquivo podem ser chamados pelo `AppController`, evitando que a lógica de negócio fique diretamente dentro das rotas.
+
+Essa separação ajuda a manter o código mais organizado e facilita futuras alterações e manutenções.
+
+## Alterações realizadas
+
+Durante o desenvolvimento do projeto, foram realizadas modificações nos arquivos
+`app.controller.ts` e `app.service.ts`.
+
+### Alterações no `app.controller.ts`
+
+O controller foi modificado para implementar os endpoints necessários para a aplicação.
+
+As principais alterações incluem:
+
+- Alteração das rotas disponíveis.
+- Criação e/ou modificação de métodos HTTP.
+- Integração do controller com o `AppService`.
+- Recebimento de parâmetros das requisições.
+- Retorno das informações processadas pelo serviço.
+- Organização das respostas da API.
+
+Exemplo da estrutura utilizada:
+
+```ts
+import { Controller, Get } from '@nestjs/common';
+import { AppService } from './app.service';
+
+@Controller()
+export class AppController {
+  constructor(private readonly appService: AppService) {}
+
+  @Get()
+  getHello(): string {
+    return this.appService.getHello();
+  }
+}
+```
+
+O controller funciona como a camada responsável por receber a requisição e encaminhá-la para o serviço correspondente.
+
+### Alterações no `app.service.ts`
+
+O `AppService` também foi modificado para implementar a lógica utilizada pelos endpoints do controller.
+
+As principais alterações incluem:
+
+- Criação e/ou alteração de métodos.
+- Implementação da lógica da aplicação.
+- Processamento das informações recebidas.
+- Retorno dos dados para o controller.
+- Organização da lógica em métodos separados.
+
+Exemplo:
+
+```ts
+import { Injectable } from '@nestjs/common';
+
+@Injectable()
+export class AppService {
+  getHello(): string {
+    return 'Hello World!';
+  }
+}
+```
+
+O `AppService` funciona como a camada responsável pelo processamento das informações utilizadas pela aplicação.
+
+## Fluxo da aplicação
+
+O funcionamento básico da aplicação segue o seguinte fluxo:
+
+```text
+┌─────────────────────┐
+│   Requisição HTTP   │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│   AppController     │
+│                     │
+│ Recebe a requisição │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│     AppService      │
+│                     │
+│ Executa a lógica    │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│      Resposta       │
+│       HTTP          │
+└─────────────────────┘
+```
+
+Essa arquitetura permite separar as responsabilidades entre o controller e o service.
+
+## Exemplo de requisição
+
+Caso o controller possua uma rota `GET`, ela pode ser acessada através de:
+
+```http
+GET /
+```
+
+Exemplo de resposta:
+
+```text
+Hello World!
+```
+
+Os endpoints disponíveis podem variar de acordo com as alterações realizadas no
+`app.controller.ts`.
+
+## Deploy
+
+Quando a aplicação estiver pronta para produção, é importante realizar as configurações necessárias para que ela seja executada de forma eficiente.
+
+Para mais informações sobre deploy de aplicações NestJS, consulte a
+documentação oficial:
+
+https://docs.nestjs.com/deployment
+
+Também é possível utilizar o NestJS Mau para realizar o deploy da aplicação na AWS:
+
+https://mau.nestjs.com
+
+Para instalar o Mau:
+
+```bash
+npm install -g @nestjs/mau
+```
+
+Depois:
+
+```bash
+mau deploy
+```
+
+## Observabilidade
+
+Em aplicações de produção, a observabilidade é importante para acompanhar o comportamento do sistema, identificar problemas e analisar o desempenho da aplicação.
+
+O NestJS possui recursos e ferramentas para auxiliar no monitoramento da aplicação.
+
+Entre os recursos de observabilidade estão:
+
+- Distributed tracing
+- Análise de performance
+- Métricas
+- Logs
+- Rastreamento de erros
+- Monitoramento de SLA
+- Alertas
+
+Mais informações:
+
+https://observe.nestjs.com
+
+## Recursos
+
+Alguns recursos úteis para trabalhar com NestJS:
+
+- Documentação oficial:
+  https://docs.nestjs.com
+
+- Repositório oficial:
+  https://github.com/nestjs/nest
+
+- Discord:
+  https://discord.gg/G7Qnnhy
+
+- Cursos oficiais:
+  https://courses.nestjs.com/
+
+- NestJS Mau:
+  https://mau.nestjs.com
+
+- NestJS Observe:
+  https://observe.nestjs.com
+
+- NestJS Devtools:
+  https://devtools.nestjs.com
+
+- Suporte empresarial:
+  https://enterprise.nestjs.com
+
+- Vagas:
+  https://jobs.nestjs.com
+
+## Suporte
+
+O NestJS é um projeto open source licenciado sob a licença MIT.
+
+Para mais informações sobre suporte e contribuições:
+
+https://docs.nestjs.com/support
+
+## Autor
+
+O NestJS foi criado por Kamil Myśliwiec.
+
+Website:
+
+https://nestjs.com/
+
+## Licença
+
+Este projeto utiliza a licença MIT.
+
+Mais informações:
+
+https://github.com/nestjs/nest/blob/master/LICENSE
+````
+
+ **Observação:** essa versão documenta as alterações de `controller.ts` e `app.service.ts` de forma genérica. Se você colar aqui o **código que você realmente colocou nesses dois arquivos**, eu consigo montar o README descrevendo exatamente o que você modificou, sem inventar funcionalidades.
