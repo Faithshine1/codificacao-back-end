@@ -1,0 +1,7 @@
+$kind: http-request
+url: localhost:3000/convidados/10
+method: PATCH
+body:
+  type: json
+  content: "{\r\n    \"idade\": 22\r\n}"
+order: 3334672474556805
