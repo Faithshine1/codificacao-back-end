@@ -1,52 +1,41 @@
-#  Projeto NestJS
+# AULA 08/09 - MÉTODOS GET, POST, PUT, PATCH E DELETE 
 
-##  Sobre o projeto
+Este projeto foi desenvolvido durante a Aula 08 do curso para praticar a criação de API Routes, a implementação e manipulação das requisições HTTP do tipo GET e POST. E posteriormente adicionamos os métodos: DELETE, PUT e PATCH.
 
-Este projeto foi desenvolvido utilizando **NestJS**, um framework progressivo para **Node.js** e **TypeScript**, voltado para a construção de aplicações **server-side eficientes, escaláveis e organizadas**.
+- Adiciona endpoints GET, POST, PATCH e DELETE no ConvidadosController
+- Implementa metodos de busca, criacao, edicao e remocao no ConvidadosService
+- Corrige inconsistencias de IDs e parametros de rota
 
-O objetivo é utilizar os principais recursos oferecidos pelo NestJS, aplicando uma estrutura adequada para o desenvolvimento de aplicações backend.
+# API de Gerenciamento de Convidados
 
----
+API RESTful desenvolvida em NestJS para gerenciamento de listas de convidados, utilizando arquitetura em camadas (Controllers e Services) e operações completas via verbos HTTP.
 
-##  Tecnologias utilizadas
+
+### Tecnologias Utilizadas
 
 * Node.js
-* NestJS
+* NestJS Framework
 * TypeScript
-* npm
+
+
+### Endpoints e Funcionalidades
+
+| Método | Rota | Descrição | Status HTTP |
+| :--- | :--- | :--- | :--- |
+| **GET** | `/convidados` | Listagem de todos os convidados cadastrados | 200 OK |
+| **POST** | `/convidados` | Cadastro de um novo convidado na lista | 201 Created |
+| **PATCH** | `/convidados/:id` | Atualização pontual da idade do convidado pelo ID | 200 OK |
+| **DELETE** | `/convidados/:id` | Remoção de um convidado específico pelo ID | 204 No Content |
 
 ---
 
-##  Estrutura do projeto
+### Estrutura dos Dados
 
-```text
-projeto/
-├── src/
-│   ├── app.controller.ts
-│   ├── app.service.ts
-│   ├── app.module.ts
-│   └── main.ts
-│
-├── test/
-│   ├── app.e2e-spec.ts
-│   └── jest-e2e.json
-│
-├── package.json
-├── tsconfig.json
-├── nest-cli.json
-└── README.md
-```
+Exemplo do objeto trafegado na aplicação:
 
-### Principais arquivos
-
-* `main.ts` — ponto de entrada da aplicação.
-* `app.module.ts` — módulo principal da aplicação.
-* `app.controller.ts` — responsável pelas rotas e requisições.
-* `app.service.ts` — contém a lógica de serviço da aplicação.
-* `package.json` — gerenciamento das dependências e scripts do projeto.
-
----
-
-##  Instalação
-
-Primeiro, instale as dep
+```json
+{
+  "id": 1,
+  "nome": "Alice",
+  "idade": 23
+}
