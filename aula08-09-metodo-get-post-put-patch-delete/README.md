@@ -29,6 +29,32 @@ API RESTful desenvolvida em NestJS para gerenciamento de listas de convidados, u
 
 ---
 
+### Testes usando INSOMNIA
+Os mesmos endpoints também foram testados utilizando o Insomnia, verificando o comportamento das requisições e os respectivos códigos de resposta HTTP.
+
+Método	Endpoint	Teste realizado	Resultado
+GET	/convidados	Listagem dos convidados	200 OK
+POST	/convidados	Cadastro de convidado	201 Created
+PATCH	/convidados/:id	Atualização da idade	200 OK
+DELETE	/convidados/:id	Remoção do convidado	204 No Content
+
+Os testes confirmaram o funcionamento dos principais endpoints da API e a correta utilização dos métodos HTTP implementados no projeto.
+
+---
+
+### Testes usando POSTMAN
+Testes realizados no Postman
+GET - Listar convidados
+GET /convidados
+
+Teste realizado para verificar a listagem dos convidados cadastrados.
+
+Resultado esperado:
+
+Status: 200 OK
+
+---
+
 ### Estrutura dos Dados
 
 Exemplo do objeto trafegado na aplicação:
