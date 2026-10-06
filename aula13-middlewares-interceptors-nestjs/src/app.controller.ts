@@ -12,11 +12,19 @@ export class AppController {
     }
   }
 
-  @Get('/admin')
+  @Get('admin')
   getAdmin(){
     return{
   message:'Bem-vindo ao Painel admnistrativo!',
   data: new Date(),
+    }
+  }
+
+  @Get('secret')
+  getSecret(){
+    return{
+      message:'Bem vindo ao Painel do Supervisor!',
+      data: new Date(),
     }
   }
 }
