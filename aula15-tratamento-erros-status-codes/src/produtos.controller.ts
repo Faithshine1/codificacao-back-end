@@ -25,5 +25,5 @@ export class ProdutosController {
             throw new NotFoundException(`Produto com ID ${id} não localizado.`)
         }
         return produto;
-    }
-}
+    }   
+} 
