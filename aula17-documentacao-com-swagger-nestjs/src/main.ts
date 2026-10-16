@@ -1,6 +1,6 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module.js';
-import { DocumentBuilder } from '@nestjs/swagger';
+import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 async function bootstrap() {
 
@@ -10,8 +10,11 @@ async function bootstrap() {
   .setDescription('Documentação Técnica interativa e vova para integração')
   .setVersion('1.0')
   .addTag('Produtos')
-  .addBasicAuth()
-  .build
+  .addBearerAuth()
+  .build();
+  const document = SwaggerModule.createDocument(app, config);
+  SwaggerModule.setup('docs', app, document);
+
   await app.listen(process.env.PORT ?? 3000);
 }
 await bootstrap();
