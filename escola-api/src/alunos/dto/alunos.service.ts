@@ -1,6 +1,11 @@
-import { Injectable } from '@nestjs/common';
-import { InjectModel } from '@nestjs/mongoose';
-import { Model } from 'mongoose';
+import { Injectable,
+  NotFoundException,
+  ConflictException,
+  InternalServerErrorException,
+  BadRequestException} from '@nestjs/common';
+import { InjectModel,} from '@nestjs/mongoose';
+import { Model, QueryFilter } from 'mongoose';
+import {MongoServerError} from 'mongodb';
 import { CreateAlunoDto } from './create-aluno-dto.js';
 import { UpdateAlunoDto } from './update-aluno.dto.js';
 import { Aluno, AlunoDocument } from '../schemas/aluno.schema.js';
@@ -10,8 +15,19 @@ export class AlunosService {
   constructor(@InjectModel(Aluno.name) private alunoModel: Model<AlunoDocument>) {}
 
   async create(createAlunoDto: CreateAlunoDto): Promise<Aluno> {
-    const createdAluno = new this.alunoModel(createAlunoDto);
-    return createdAluno.save();
+  
+    try{
+      const createdAluno = new this.alunoModel(createAlunoDto);
+      return await createdAluno.save();//!POST
+    }catch (error: unknown) {
+      if(
+        error instanceof MongoServerError && error.code === 11000
+      ){
+        throw new ConflictException('Aluno já existe. A matrícula deve ser única.');
+      }
+      throw new InternalServerErrorException('Erro ao processar a matrícula do aluno. Tente novamente mais tarde.');
+    }
+
   }
 
 async findAllPageFilter(
