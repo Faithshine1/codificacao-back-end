@@ -118,7 +118,7 @@ export class AlunosController {
     @ApiOperation({
         summary: 'Retorna aluno específico pelo ID'
     })
-    @ApiResponse({
+    @ApiResponse({ 
         status: 200,
         description: 'Aluno retornado com sucesso. '
     })
